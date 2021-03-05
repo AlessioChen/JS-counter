@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <script>
+
+       window.onload = loadFunction; 
+
+
+       function increment() {
+           let current_number = document.getElementById("number").textContent;
+           console.log(current_number);
+           document.getElementById("number").textContent = Number(current_number)+1;
+           
+       }
+
+       function decrement() {
+           let current_number = document.getElementById("number").textContent;
+           console.log(current_number);
+           document.getElementById("number").textContent = Number(current_number)-1;
+
+           if(current_number <= 0){
+               alert("Errore!");
+                document.getElementById("number").textContent = Number(0);
+           }
+           
+       }
+
+       function loadFunction(){
+
+        
+
+        document.body.innerHTML =  document.body.innerHTML= '<p id="number">0</p>  <button onclick="increment()">+</button> <button onclick="decrement()">-</button>'
+       
+
+
+       }
+
+   </script>
+
+   
+   
+
+</head>
+<body >
+
+
+</body>
+</html>
